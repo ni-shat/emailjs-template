@@ -7,21 +7,22 @@
 </head>
 
 <body>
-    <h1>EmailJS Integration</h1>
+    <h1>CONTACT US</h1>
     <form id="email-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" required><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" required><br>
 
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" required><br><br>
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
 
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        <label for="feedback">Feedback</label><br>
+        <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br>
 
-        <button type="button" id="send-email">Send Email</button>
+
+        <button type="button" id="send-email">SUBMIT</button>
     </form>
 
     <script>
@@ -34,10 +35,11 @@
             console.log(name, email, subject, message)
 
             emailjs.send('service_8jc0m47', 'template_55juox9', {
+                to_name: "Blood Help",
                 from_name: name,
                 from_email: email,
-                subject: subject,
-                message_html: message
+                message: message,
+                feedback: feedback
             }, 'SmZriU9JvFFRGcplG')
                 .then(function (response) {
                     console.log('Email sent successfully:', response);
