@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="">
-    <div class="">
+<body class="container">
+    <div class="main-div">
         <h1>CONTACT US</h1>
         <form id="email-form">
             <label for="name">Name</label><br>
@@ -35,7 +35,7 @@
             const feedback = document.getElementById('feedback').value;
             const message = document.getElementById('message').value;
 
-            console.log(name, email, subject, message)
+            console.log(name, email, feedback, message)
 
             emailjs.send('service_8jc0m47', 'template_55juox9', {
                 to_name: "Blood Help",

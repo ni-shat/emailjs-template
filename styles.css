@@ -8,7 +8,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.conatiner {
+.container {
     display: flex;
     /* flex: 1; */
     /* padding-top: 10px;
@@ -63,6 +63,7 @@ form button {
     font-weight: 600;
     background-color: #c5062f;
     color: white;
+    cursor: pointer;
 }
 
 
