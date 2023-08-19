@@ -1,0 +1,26 @@
+<!-- emailjs.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+
+<body>
+    <h1>EmailJS Integration</h1>
+    <!-- HTML form and input fields here -->
+    <script>
+        // email sending code here
+        emailjs.send('service_8jc0m47', 'template_55juox9', {
+            firstName: 'John',
+            
+        }, 'SmZriU9JvFFRGcplG')
+            .then(function (response) {
+                console.log('Email sent successfully:', response);
+            }, function (error) {
+                console.error('Email sending failed:', error);
+            });
+    </script>
+</body>
+
+</html>
