@@ -7,43 +7,28 @@
 </head>
 
 <body>
-    <!-- <h1>EmailJS Integration</h1> -->
-    <div class="container">
-        <div class="text">
-            Contact us
-        </div>
-        <form id="email-form">
-            <div class="">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required><br><br>
-            </div>
-            <div class="">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required><br><br>
-            </div>
+    <h1>EmailJS Integration</h1>
+    <form id="email-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
 
-            <div class="">
-                <label for="feedback">Feedback</label>
-                <input type="text" id="feedback" name="feedback" required><br><br>
-            </div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
 
-            <div class="">
-                <label for="message">Message</label><br>
-                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-            </div>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br><br>
 
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
 
-            <button type="button" id="send-email">Send Email</button>
-        </form>
-    </div>
+        <button type="button" id="send-email">Send Email</button>
+    </form>
 
-  
-    
     <script>
         document.getElementById('send-email').addEventListener('click', function () {
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
-            const feedback = document.getElementById('feedback').value;
+            const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
 
             console.log(name, email, subject, message)
@@ -51,7 +36,7 @@
             emailjs.send('service_8jc0m47', 'template_55juox9', {
                 from_name: name,
                 from_email: email,
-                feedback: feedback,
+                subject: subject,
                 message_html: message
             }, 'SmZriU9JvFFRGcplG')
                 .then(function (response) {
