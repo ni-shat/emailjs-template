@@ -2,28 +2,31 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-    <h1>CONTACT US</h1>
-    <form id="email-form">
-        <label for="name">Name</label><br>
-        <input type="text" id="name" name="name" required><br>
+<body class="conatiner">
+    <div class="main-div">
+        <h1>CONTACT US</h1>
+        <form id="email-form">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" required><br>
 
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" required><br>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required><br>
 
-        <label for="message">Message</label><br>
-        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
 
-        <label for="feedback">Feedback</label><br>
-        <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br>
+            <label for="feedback">Feedback</label><br>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br>
 
 
-        <button type="button" id="send-email">SUBMIT</button>
-    </form>
+            <button type="button" id="send-email">SUBMIT</button>
+        </form>
+    </div>
 
     <script>
         document.getElementById('send-email').addEventListener('click', function () {
