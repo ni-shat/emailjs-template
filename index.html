@@ -3,11 +3,12 @@
 
 <head>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>EmailJS Integration</h1>
-    <form id="email-form">
+    <!-- <h1>EmailJS Integration</h1> -->
+    <!-- <form id="email-form">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
 
@@ -21,19 +22,68 @@
         <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
 
         <button type="button" id="send-email">Send Email</button>
-    </form>
+    </form> -->
+
+    <div class="container">
+        <div class="text">
+            Contact us Form
+        </div>
+        <form id="email-form" action="#">
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" id="name" name="name" required>
+                    <div class="underline"></div>
+                    <label for="">Name</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="email" id="email" name="email" required>
+                    <div class="underline"></div>
+                    <label for="">Email Address</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data textarea">
+                    <textarea id="feedback" name="feedback" rows="8" cols="80" required></textarea>
+                    <br />
+                    <div class="underline"></div>
+                    <label for="">Write Feedback</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data textarea">
+                    <textarea id="message" name="message" rows="8" cols="100" required></textarea>
+                    <br />
+                    <div class="underline"></div>
+                    <label for="">Write your message</label>
+                    <br />
+                    <div class="form-row submit-btn">
+                        <div class="input-data">
+                            <div class="inner"></div>
+                            <input type="submit" value="submit">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
 
     <script>
         document.getElementById('send-email').addEventListener('click', function () {
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
+            const feedback = document.getElementById('feedback').value;
             const message = document.getElementById('message').value;
+
+            console.log(name, email, subject, message)
 
             emailjs.send('service_8jc0m47', 'template_55juox9', {
                 from_name: name,
                 from_email: email,
-                subject: subject,
+                feedback: feedback,
                 message_html: message
             }, 'SmZriU9JvFFRGcplG')
                 .then(function (response) {
