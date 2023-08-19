@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="conatiner">
-    <div class="main-div">
+<body class="">
+    <div class="">
         <h1>CONTACT US</h1>
         <form id="email-form">
             <label for="name">Name</label><br>
@@ -32,7 +32,7 @@
         document.getElementById('send-email').addEventListener('click', function () {
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
+            const feedback = document.getElementById('feedback').value;
             const message = document.getElementById('message').value;
 
             console.log(name, email, subject, message)
